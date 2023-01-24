@@ -1,0 +1,169 @@
+Enter password: **********
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 35Enter password: **********
+Server version: 5.5.62 MySQL Community Server (GPL)
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+
+Your MySQL connection id is 35
+Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved.
+Server version: 5.5.62 MySQL Community Server (GPL)
+
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved.
+affiliates. Other names may be trademarks of their respective
+
+owners.
+Oracle is a registered trademark of Oracle Corporation and/or its
+
+affiliates. Other names may be trademarks of their respective
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+owners.
+
+
+mysql> create database diff;
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+Query OK, 1 row affected (0.26 sec)
+
+
+mysql> create database diff;
+mysql> show databases;
+Query OK, 1 row affected (0.26 sec)
++--------------------+
+
+| Database           |
+mysql> show databases;
++--------------------+
++--------------------+
+| information_schema |
+| Database           |
+| dbms               |
++--------------------+
+| diff               |
+| information_schema |
+| employee           |
+| dbms               |
+| empoloyee          |
+| diff               |
+| faculty            |
+| employee           |
+| mysql              |
+| empoloyee          |
+| performance_schema |
+| faculty            |
+| rowdy              |
+| mysql              |
+| staff              |
+| performance_schema |
+| student            |
+| rowdy              |
+| test               |
+| staff              |
+| veera              |
+| student            |
++--------------------+
+| test               |
+13 rows in set (0.04 sec)
+| veera              |
+
++--------------------+
+mysql> use diff;
+13 rows in set (0.04 sec)
+Database changed
+
+mysql> create table diff (name varchar(11),age int(23),sex varchar(33));
+mysql> use diff;
+Query OK, 0 rows affected (0.63 sec)
+Database changed
+
+mysql> create table diff (name varchar(11),age int(23),sex varchar(33));
+mysql> desc diff;
+Query OK, 0 rows affected (0.63 sec)
++-------+-------------+------+-----+---------+-------+
+
+| Field | Type        | Null | Key | Default | Extra |
+mysql> desc diff;
++-------+-------------+------+-----+---------+-------+
++-------+-------------+------+-----+---------+-------+
+| name  | varchar(11) | YES  |     | NULL    |       |
+| Field | Type        | Null | Key | Default | Extra |
+| age   | int(23)     | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+| sex   | varchar(33) | YES  |     | NULL    |       |
+| name  | varchar(11) | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+| age   | int(23)     | YES  |     | NULL    |       |
+3 rows in set (0.02 sec)
+| sex   | varchar(33) | YES  |     | NULL    |       |
+
++-------+-------------+------+-----+---------+-------+
+mysql> alter table diff add location varchar(67);
+3 rows in set (0.02 sec)
+Query OK, 0 rows affected (0.50 sec)
+
+Records: 0  Duplicates: 0  Warnings: 0
+mysql> alter table diff add location varchar(67);
+
+Query OK, 0 rows affected (0.50 sec)
+mysql> desc diff;
+Records: 0  Duplicates: 0  Warnings: 0
++----------+-------------+------+-----+---------+-------+
+
+| Field    | Type        | Null | Key | Default | Extra |
+mysql> desc diff;
++----------+-------------+------+-----+---------+-------+
++----------+-------------+------+-----+---------+-------+
+| name     | varchar(11) | YES  |     | NULL    |       |
+| Field    | Type        | Null | Key | Default | Extra |
+| age      | int(23)     | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+| sex      | varchar(33) | YES  |     | NULL    |       |
+| name     | varchar(11) | YES  |     | NULL    |       |
+| location | varchar(67) | YES  |     | NULL    |       |
+| age      | int(23)     | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+| sex      | varchar(33) | YES  |     | NULL    |       |
+4 rows in set (0.04 sec)
+| location | varchar(67) | YES  |     | NULL    |       |
+
++----------+-------------+------+-----+---------+-------+
+mysql> alter table diff drop column sex;
+4 rows in set (0.04 sec)
+Query OK, 0 rows affected (0.33 sec)
+
+Records: 0  Duplicates: 0  Warnings: 0
+mysql> alter table diff drop column sex;
+
+Query OK, 0 rows affected (0.33 sec)
+mysql> desc diff;
+Records: 0  Duplicates: 0  Warnings: 0
++----------+-------------+------+-----+---------+-------+
+
+| Field    | Type        | Null | Key | Default | Extra |
+mysql> desc diff;
++----------+-------------+------+-----+---------+-------+
++----------+-------------+------+-----+---------+-------+
+| name     | varchar(11) | YES  |     | NULL    |       |
+| Field    | Type        | Null | Key | Default | Extra |
+| age      | int(23)     | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+| location | varchar(67) | YES  |     | NULL    |       |
+| name     | varchar(11) | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+| age      | int(23)     | YES  |     | NULL    |       |
+3 rows in set (0.00 sec)
+| location | varchar(67) | YES  |     | NULL    |       |
+
++----------+-------------+------+-----+---------+-------+
+mysql> drop table diff;
+3 rows in set (0.00 sec)
+Query OK, 0 rows affected (0.06 sec)
+
+
+mysql> drop table diff;
+mysql> desc diff;
+Query OK, 0 rows affected (0.06 sec)
+ERROR 1146 (42S02): Table 'diff.diff' doesn't exist
+
+mysql> desc diff;
+ERROR 1146 (42S02): Table 'diff.diff' doesn't exist
